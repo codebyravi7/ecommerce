@@ -13,7 +13,7 @@ export const createNewOrder = createAsyncThunk(
   "/order/createNewOrder",
   async (orderData) => {
     const response = await axios.post(
-      `${import.meta.env.Backend_URL}/shop/order/create`,
+      `${import.meta.env.VITE_Backend_URL}/shop/order/create`,
       orderData
     );
 
@@ -25,7 +25,7 @@ export const capturePayment = createAsyncThunk(
   "/order/capturePayment",
   async (paymentData) => {
     const response = await axios.post(
-      `${import.meta.env.Backend_URL}/shop/order/capture`,
+      `${import.meta.env.VITE_Backend_URL}/shop/order/capture`,
       paymentData
     );
 
@@ -37,7 +37,7 @@ export const getAllOrdersByUserId = createAsyncThunk(
   "/order/getAllOrdersByUserId",
   async (userId) => {
     const response = await axios.get(
-      `${import.meta.env.Backend_URL}/shop/order/list/${userId}`
+      `${import.meta.env.VITE_Backend_URL}/shop/order/list/${userId}`
     );
 
     return response.data;
@@ -48,7 +48,7 @@ export const getOrderDetails = createAsyncThunk(
   "/order/getOrderDetails",
   async (id) => {
     const response = await axios.get(
-      `${import.meta.env.Backend_URL}/shop/order/details/${id}`
+      `${import.meta.env.VITE_Backend_URL}/shop/order/details/${id}`
     );
 
     return response.data;

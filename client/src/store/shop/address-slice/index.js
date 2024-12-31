@@ -10,7 +10,7 @@ export const addNewAddress = createAsyncThunk(
   "/addresses/addNewAddress",
   async (formData) => {
     const response = await axios.post(
-      `${import.meta.env.Backend_URL}/shop/address/add`,
+      `${import.meta.env.VITE_Backend_URL}/shop/address/add`,
       formData
     );
 
@@ -22,7 +22,7 @@ export const fetchAllAddresses = createAsyncThunk(
   "/addresses/fetchAllAddresses",
   async (userId) => {
     const response = await axios.get(
-      `${import.meta.env.Backend_URL}/shop/address/get/${userId}`
+      `${import.meta.env.VITE_Backend_URL}/shop/address/get/${userId}`
     );
 
     return response.data;
@@ -34,7 +34,7 @@ export const editaAddress = createAsyncThunk(
   async ({ userId, addressId, formData }) => {
     const response = await axios.put(
       `${
-        import.meta.env.Backend_URL
+        import.meta.env.VITE_Backend_URL
       }/shop/address/update/${userId}/${addressId}`,
       formData
     );
@@ -48,7 +48,7 @@ export const deleteAddress = createAsyncThunk(
   async ({ userId, addressId }) => {
     const response = await axios.delete(
       `${
-        import.meta.env.Backend_URL
+        import.meta.env.VITE_Backend_URL
       }/shop/address/delete/${userId}/${addressId}`
     );
 

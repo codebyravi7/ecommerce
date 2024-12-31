@@ -19,6 +19,8 @@ function AuthLogin() {
   function onSubmit(event) {
     event.preventDefault();
 
+    console.log("fists", `${import.meta.env.VITE_Backend_URL}/auth/login`);
+
     dispatch(loginUser(formData)).then((data) => {
       if (data?.payload?.success) {
         toast({
