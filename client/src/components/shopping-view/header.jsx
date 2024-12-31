@@ -79,7 +79,6 @@ function HeaderRightContent() {
     dispatch(fetchCartItems(user?.id));
   }, [dispatch]);
 
-
   return (
     <div className="flex lg:items-center lg:flex-row flex-col gap-4">
       <Sheet open={openCartSheet} onOpenChange={() => setOpenCartSheet(false)}>
@@ -138,8 +137,9 @@ function ShoppingHeader() {
     <header className="fixed top-0 z-40 w-full border-b-red-400 bg-background">
       <div className="flex h-16 items-center justify-between px-4 md:px-6">
         <Link to="/shop/home" className="flex items-center gap-2">
-          <HousePlug className="h-6 w-6" />
-          <span className="font-bold">Ecommerce</span>
+          <div className="logo w-32">
+            <img src="../../../logo.png" alt="" />
+          </div>
         </Link>
         <Sheet>
           <SheetTrigger asChild>

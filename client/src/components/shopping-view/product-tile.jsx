@@ -9,7 +9,7 @@ function ShoppingProductTile({
   handleAddtoCart,
 }) {
   return (
-    <Card className="w-full max-w-sm mx-auto">
+    <Card className="w-full max-w-sm mx-auto flex flex-col">
       <div onClick={() => handleGetProductDetails(product?._id)}>
         <div className="relative">
           <img
@@ -59,7 +59,7 @@ function ShoppingProductTile({
           </div>
         </CardContent>
       </div>
-      <CardFooter>
+      <CardFooter className="mt-auto">
         {product?.totalStock === 0 ? (
           <Button className="w-full opacity-60 cursor-not-allowed">
             Out Of Stock
