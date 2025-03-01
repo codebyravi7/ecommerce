@@ -81,7 +81,7 @@ function SearchProducts() {
   }, [productDetails]);
 
   return (
-    <div className="container mx-auto md:px-6 px-4 py-8">
+    <div className="container mt-20 mx-auto md:px-6 px-4 py-8">
       <div className="flex justify-center mb-8">
         <div className="w-full flex items-center">
           <Input
